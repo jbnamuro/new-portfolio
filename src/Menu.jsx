@@ -1,12 +1,19 @@
 import React from "react";
 import { motion } from "motion/react";
 import { useState } from "react";
+import { easeOut } from "motion";
 
-const Header = () => {
+const Menu = () => {
   const [isToggled, setToggled] = useState(false);
   return (
-    <div className="header">
-      <img src="" alt="logo" />
+    <div className="menu-wrapper">
+      <motion.div
+        className="menu-screen"
+        animate={{ left: isToggled ? 0 : "100%" }}
+        transition={{ duration: 0.5, ease: easeOut }}
+      ></motion.div>
+      <div className="header"></div>
+      <img src="" alt="logo" id="logo" />
       <div
         className="bars"
         onClick={() => {
@@ -26,8 +33,9 @@ const Header = () => {
           animate={{ rotate: isToggled ? -45 : 0 }}
         ></motion.div>
       </div>
+      <div className="line"></div>
     </div>
   );
 };
 
-export default Header;
+export default Menu;

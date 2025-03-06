@@ -6,28 +6,48 @@
 * {
   padding: 0;
   margin: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  pointer-events: none;
 }
 
 .home-wrapper {
   height: 100dvh;
+  /* background-color: red; */
 }
 
 body {
   padding: 0 10px;
 }
 
+#logo {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  z-index: 10;
+}
+
 .header {
-  display: flex;
-  justify-content: space-between;
-  border: 1px solid red;
-  align-items: center;
+  position: fixed;
+  z-index: 1;
+  background-color: white;
+  height: 35px;
+  width: 100%;
+  top: 0;
+  left: 0;
 }
 
 .bars {
+  position: fixed;
+  top: 10px;
+  z-index: 100;
+  right: 10px;
   display: flex;
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  pointer-events: all;
 }
 
 .bar {
@@ -42,4 +62,63 @@ body {
 
 .bar:nth-child(1) {
   transform-origin: top left;
+}
+
+.menu-screen {
+  position: fixed;
+  left: 100%;
+  top: 0;
+  height: 100dvh;
+  width: 100%;
+  background-color: red;
+  z-index: 20;
+}
+
+.line {
+  position: fixed;
+  top: 35px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: var(--gray-text);
+}
+
+#name {
+  font-size: 20vw;
+  text-align: center;
+  line-height: 75%;
+  margin-top: 50px;
+}
+
+#slogan {
+  font-size: 7.5vw;
+  text-align: center;
+}
+
+b {
+  color: var(--purple-accent);
+}
+
+.work-with {
+  background-color: black;
+  color: white;
+  width: fit-content;
+  display: flex;
+  gap: 5px;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+#creating {
+  -webkit-text-stroke: 0.4px black;
+  color: transparent;
+  font-size: 8vw;
+}
+
+.work-arrow {
+  height: 10px;
+  width: 10px;
+  background-color: red;
+  position: absolute;
 }

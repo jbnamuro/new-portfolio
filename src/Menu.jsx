@@ -1,39 +1,38 @@
 import React from "react";
 import { motion } from "motion/react";
 import { useState } from "react";
-import { easeOut } from "motion";
 
 const Menu = () => {
-  const [isToggled, setToggled] = useState(false);
+  const [menuOn, setMenu] = useState(false);
   return (
-    <div className="menu-wrapper">
+    <div>
       <motion.div
-        className="menu-screen"
-        animate={{ left: isToggled ? 0 : "100%" }}
-        transition={{ duration: 0.5, ease: easeOut }}
+        className="menu-open"
+        animate={{ top: menuOn ? 0 : "100%" }}
+        transition={{ duration: 0.7, ease: [0.25, 0.1, 0.25, 1] }}
       ></motion.div>
-      <div className="header"></div>
-      <img src="" alt="logo" id="logo" />
       <div
         className="bars"
         onClick={() => {
-          setToggled(!isToggled);
+          setMenu(!menuOn);
         }}
       >
         <motion.div
           className="bar"
-          animate={{ rotate: isToggled ? 45 : 0 }}
+          animate={{ scaleX: menuOn ? 0 : 1 }}
+          transition={{ delay: menuOn ? 0 : 0.2 }}
         ></motion.div>
         <motion.div
           className="bar"
-          animate={{ scale: isToggled ? 0 : 1 }}
+          animate={{ rotate: menuOn ? 45 : 0 }}
+          transition={{ delay: menuOn ? 0.2 : 0 }}
         ></motion.div>
         <motion.div
           className="bar"
-          animate={{ rotate: isToggled ? -45 : 0 }}
+          animate={{ scaleX: menuOn ? 0 : 1 }}
+          transition={{ delay: menuOn ? 0 : 0.2 }}
         ></motion.div>
       </div>
-      <div className="line"></div>
     </div>
   );
 };

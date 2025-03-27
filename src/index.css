@@ -169,3 +169,8 @@ a {
   max-height: 0;
   overflow: hidden;
 }
+
+.contact-wrapper {
+  background-color: black;
+  color: white;
+}

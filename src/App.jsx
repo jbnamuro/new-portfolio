@@ -3,6 +3,7 @@ import Sites from "./Sites";
 import Offers from "./Offers";
 import Menu from "./Menu";
 import LandContent from "./LandContent";
+import Contact from "./Contact";
 
 const App = () => {
   return (
@@ -11,6 +12,7 @@ const App = () => {
       <LandContent />
       <Sites />
       <Offers />
+      <Contact />
     </div>
   );
 };

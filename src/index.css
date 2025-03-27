@@ -141,6 +141,31 @@ a {
   bottom: 0;
 }
 
-#creating {
+#creating,
+#offers {
   font-size: 10vw;
+}
+
+#offers {
+  text-align: right;
+}
+
+.expandable {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.space {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.hidden {
+  max-height: 0;
+  overflow: hidden;
 }

@@ -24,6 +24,7 @@ const LandContent = () => {
           </p>
         </div>
       </div>
+      <div className="line"></div>
     </div>
   );
 };
